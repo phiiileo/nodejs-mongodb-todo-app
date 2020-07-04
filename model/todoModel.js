@@ -1,8 +1,13 @@
 const mongoose = require('mongoose');
+const dotenv = require('dotenv').config();
 
-mongoose.connect("mongodb+srv://phileo:admin_phileo@phileo-db.fqfdh.mongodb.net/node_todo_app?retryWrites=true&w=majority", {
+console.log(process.env.mongodbUrl)
+mongoose.connect(process.env.mongodbUrl, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
+    })
+    .then(data => {
+        console.log("Connected to the DB successfully")
     })
     .catch(error => {
         console.log(error)
