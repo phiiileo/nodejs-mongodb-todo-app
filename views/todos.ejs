@@ -10,46 +10,21 @@
 
 <body>
     <main>
-
-        <form action="" id="task_form">
+        <% include('partials/header.ejs') %>
+        <form action="" id="task_form" method="post">
             <input type="text" name="new_task" value="" placeholder="Enter new task" required>
             <button>Add Task</button>
         </form>
         <section class="todo-list">
             <ul>
                 <% todos.forEach((todo, i) =>{ %>
-                <li id="<%= todo.id %>" class="<%= (todo.done) ? 'done':'' %>"><%= todo.text%> <span
-                        class="close">x</span></li>
+                <li id="<%= todo._id %>" class="<%= (todo.done) ? 'done':'' %>"><%= todo.text%> 
+                    <span id="<%= '_'+todo._id %>"  class="close">x</span></li>
                 <%})%>
             </ul>
         </section>
     </main>
+
 </body>
-<script>
-    const todos = document.querySelectorAll("ul li");
-    const task_form = document.getElementById('task_form');
-
-
-    todos.forEach(todo => {
-        todo.addEventListener('click', () => {
-            finishTask(todo)
-        })
-    })
-    console.log(task_form)
-    task_form.addEventListener('submit', handleSubmit)
-
-    function handleSubmit(event) {
-        _formData = new FormData(task_form)
-        _formData.set('name',"hello world");
-        // for (const [name, value] of _formData) {
-        //     console.log(name, value)
-        // };
-        // console.log(_formData)
-    }
-
-    const finishTask = (task) => {
-        console.log(task.id)
-    }
-</script>
-
+<script src="js/todo.js"></script>
 </html>
