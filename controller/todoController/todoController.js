@@ -1,6 +1,4 @@
 const bodyParser = require('body-parser');
-const todoData = require("./../../constantsData/todo");
-const mongoose = require('mongoose');
 const Todo = require("./../../model/todoModel")
 
 
