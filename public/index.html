@@ -1,11 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        header {
+            padding: 20px;
+            font-size: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: aliceblue;
+        }
+
+        header a {
+            color: black;
+            margin-left: 20px;
+            text-decoration: none;
+        }
+    </style>
 </head>
+
 <body>
-    Hello World
+    <main>
+        <header>
+            <span>logo</span>
+            <nav>
+                <a href="./index.html">Home</a>
+                <a href="/about">About</a>
+                <a href="/todos">Todo App</a>
+            </nav>
+        </header>
+    </main>
 </body>
+
 </html>

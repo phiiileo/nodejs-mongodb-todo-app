@@ -1,0 +1,105 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: rgb(218, 211, 211);
+}
+
+main {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: whitesmoke;
+    padding: 50px 30px;
+}
+
+main form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 20px 0;
+}
+
+main form input {
+    width: 100%;
+    height: 50px;
+    border: 1px solid grey;
+    border-right: none;
+    margin-right: -20px;
+    padding: 0 20px;
+    outline: transparent;
+    border-radius: 5px;
+}
+
+main form input:focus {
+    border: 1px solid green;
+}
+
+main form button {
+    height: 50px;
+    width: 150px;
+    padding: 0 30px;
+    cursor: pointer;
+    background-color: green;
+    color: white;
+    border: 1px solid green;
+    border-radius:0 5px 5px 0;
+}
+
+main form button:hover{
+    background-color: rgb(5, 77, 5);
+}
+
+section.todo-list {
+    border: 3px solid rgb(218, 211, 211);;
+}
+
+.todo-list ul {
+    list-style: none;
+}
+
+.todo-list li {
+    padding: 10px;
+    border: 1px solid transparent;
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo-list li:hover {
+    border: 1px solid rgb(218, 211, 211);;
+    border-left: none;
+    border-right: none;
+    cursor: pointer;
+}
+.todo-list li:hover .close{
+    opacity: 1;
+    transition: all .5s;
+}
+
+.close {
+    font-size: 10px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3px;
+    opacity: 0;
+    z-index: 4;
+}
+
+.close:hover{
+    background-color: rgb(143, 18, 18);
+    transition: all .3s;
+}
+
+.done{
+    text-decoration: line-through;
+    color: grey;
+}
